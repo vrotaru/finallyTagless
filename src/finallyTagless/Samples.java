@@ -22,11 +22,17 @@ public class Samples {
         return e1;
     }
 
-    // public <R> R sample2(IExpM<R> exp) {
-    // R lit_5 = exp.lit(5);
-    // R e0 = sample(exp);
-    // R e1 = exp.mul(lit_5, e0);
-    //
-    // return e1;
-    // }
+    public static <R> R three(ExpM<R> exp) {
+        R e0 = one(exp);
+        R e1 = exp.mul(exp.lit(3), e0);
+
+        return e1;
+    }
+
+    public static <R> R four(ExpM<R> exp) {
+        R e0 = two(exp);
+        R e1 = exp.mul(exp.lit(4), e0);
+
+        return e1;
+    }
 }
